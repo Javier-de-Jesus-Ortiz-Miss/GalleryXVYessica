@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Sube tus fotos a la Galería XV Yessica!</title>
+    <title>¡Galería Yessica Perera!</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=MonteCarlo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,46 +11,64 @@
     <!-- Pantalla de carga -->
     <div id="loader">
         <div class="loader-content">
+            <p class="loader-text">Cargando...</p>
             <span class="loader-spinner"></span>
-            <h1>¡Bienvenid@ a la Galería XV Yessica!</h1>
-            <p>Cargando...</p>
         </div>
     </div>
 
-    <main class="container">
-        <header>
-            <h1 class="title">Galería XV Yessica</h1>
-            <p class="subtitle">¡Comparte tus mejores momentos de la fiesta!</p>
-        </header>
-        <section class="cta-section">
-            <a href="https://photos.app.goo.gl/tu-album" target="_blank" class="cta-btn">
-                📸 Sube tu foto aquí
-            </a>
-            <p class="cta-note">Haz clic en el botón para ir al álbum compartido de Google Fotos.</p>
-        </section>
-        <section class="steps-section">
-            <h2 class="steps-title">¿Cómo subir tu foto?</h2>
-            <ol class="steps-list">
-                <li>
-                    <strong>Paso 1:</strong> Da clic en el botón de arriba.<br>
-                    <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>
-                </li>
-                <li>
-                    <strong>Paso 2:</strong> Si te pide iniciar sesión, usa tu cuenta de Google.<br>
-                    <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>
-                </li>
-                <li>
-                    <strong>Paso 3:</strong> Presiona el ícono <b>Agregar fotos</b> (<span class="icon">＋</span>).<br>
-                    <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>
-                </li>
-                <li>
-                    <strong>Paso 4:</strong> Selecciona tus fotos favoritas y súbelas.<br>
-                    <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>
-                </li>
-            </ol>
-            <p class="thanks">¡Gracias por compartir tus recuerdos! 💖</p>
-        </section>
-    </main>
+    <div class="main-bg">
+        <canvas id="particles-bg"></canvas>
+        <main class="container main-card">
+            <header>
+                <span class="gallery-label">GALERÍA</span>
+                <h1 class="title">XV Yessica</h1>
+                <p class="subtitle">¡Comparte tus mejores momentos de la fiesta!</p>
+            </header>
+            <section class="cta-section">
+                <a href="https://photos.app.goo.gl/kMA5CRYqVhfZGh1y9" id="openTutorial" class="cta-btn" target="_blank" rel="noopener">
+                    📸 Sube tu foto aquí
+                </a>
+                <p class="cta-note">Haz clic en el botón para ver cómo subir tu foto al álbum compartido de Google Fotos.</p>
+            </section>
+            <section class="help-section">
+                <p class="help-text">¿No pudiste subir tus fotos?</p>
+                <button id="openHelp" class="help-btn">
+                    Haz clic aquí para ver ayuda
+                </button>
+            </section>
+        </main>
+        <!-- Modal Tutorial -->
+        <div id="tutorialModal" class="modal-bg" style="display:none;">
+            <div class="modal-card">
+                <div id="tutorialSteps">
+                    <!-- Los pasos se llenan por JS -->
+                </div>
+                <div class="modal-actions">
+                    <button id="prevStep" class="modal-nav-btn">Antes</button>
+                    <button id="nextStep" class="modal-nav-btn">Siguiente</button>
+                    <button id="finishTutorial" class="modal-nav-btn" style="display:none;">Entendido</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Ayuda -->
+        <div id="helpModal" class="modal-bg" style="display:none;">
+            <div class="modal-card">
+                <div class="device-select" style="margin-bottom:16px;">
+                    <label for="helpDeviceType"><b>Selecciona tu teléfono:</b></label>
+                    <select id="helpDeviceType">
+                        <option value="iphone">iPhone</option>
+                        <option value="android">Teléfono Android</option>
+                    </select>
+                </div>
+                <div id="helpSteps">
+                    <!-- Los pasos se llenan por JS -->
+                </div>
+                <div class="modal-actions">
+                    <button id="closeHelp" class="modal-nav-btn">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
