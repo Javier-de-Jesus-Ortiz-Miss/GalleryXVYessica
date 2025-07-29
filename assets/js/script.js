@@ -94,14 +94,20 @@ window.addEventListener('DOMContentLoaded', function() {
     const tutorialSteps = [
         {
             html: `<strong>Paso 1:</strong> Escoge tu cuenta de Google y haz clic en <b>Ver álbum</b>. <span style="font-size:0.97em;color:#b94a4a;">(Ten en cuenta haber dado los permisos necesarios a la aplicación)</span><br>
-            <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>`
+            <img src="assets/img/step1.webp" alt="Paso 1" class="tutorial-img" style="display:block;width:100%;max-width:260px;margin:12px auto 0 auto;border-radius:12px;box-shadow:0 2px 12px #f9d6c1;">
+            `
         },
         {
             html: `<strong>Paso 2:</strong> Haz clic en el botón <b>Agregar fotos</b> (<span class="icon">＋</span>).<br>
-            <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>`
+            <img src="assets/img/step2.webp" alt="Paso 2" class="tutorial-img" style="display:block;width:100%;max-width:260px;margin:12px auto 0 auto;border-radius:12px;box-shadow:0 2px 12px #f9d6c1;">
+            `
         },
         {
-            html: `<div style="text-align:center;"><strong>Paso 3:</strong> Escoge tus fotos favoritas y súbelas.</div>`
+            html: `<div style="display:flex;align-items:center;justify-content:center;text-align:center;">
+                <div>
+                    <strong>Paso 3:</strong> Escoge tus fotos favoritas y súbelas. :)
+                </div>
+            </div>`
         }
     ];
     let tutorialIndex = 0;
@@ -152,70 +158,13 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Modal Ayuda ---
-    const helpStepsData = {
-        iphone: [
-            {
-                html: `<strong>Paso 1 (iPhone):</strong> Da clic en el botón "Ir a Google Fotos".<br>
-                <div class="screenshot-placeholder">[Captura iPhone 1]</div>`
-            },
-            {
-                html: `<strong>Paso 2 (iPhone):</strong> Inicia sesión con tu cuenta Google si es necesario.<br>
-                <div class="screenshot-placeholder">[Captura iPhone 2]</div>`
-            },
-            {
-                html: `<strong>Paso 3 (iPhone):</strong> Presiona el ícono <b>Agregar fotos</b> (<span class="icon">＋</span>).<br>
-                <div class="screenshot-placeholder">[Captura iPhone 3]</div>`
-            },
-            {
-                html: `<strong>Paso 4 (iPhone):</strong> Selecciona tus fotos y súbelas.<br>
-                <div class="screenshot-placeholder">[Captura iPhone 4]</div>`
-            }
-        ],
-        android: [
-            {
-                html: `<strong>Paso 1 (Android):</strong> Da clic en el botón "Ir a Google Fotos".<br>
-                <div class="screenshot-placeholder">[Captura Android 1]</div>`
-            },
-            {
-                html: `<strong>Paso 2 (Android):</strong> Inicia sesión con tu cuenta Google si es necesario.<br>
-                <div class="screenshot-placeholder">[Captura Android 2]</div>`
-            },
-            {
-                html: `<strong>Paso 3 (Android):</strong> Presiona el ícono <b>Agregar fotos</b> (<span class="icon">＋</span>).<br>
-                <div class="screenshot-placeholder">[Captura Android 3]</div>`
-            },
-            {
-                html: `<strong>Paso 4 (Android):</strong> Selecciona tus fotos y súbelas.<br>
-                <div class="screenshot-placeholder">[Captura Android 4]</div>`
-            }
-        ]
-    };
-    let helpDevice = 'iphone';
-    let helpIndex = 0;
-
     const openHelpBtn = document.getElementById('openHelp');
     const helpModal = document.getElementById('helpModal');
-    const helpStepsDiv = document.getElementById('helpSteps');
-    const helpDeviceType = document.getElementById('helpDeviceType');
     const closeHelpBtn = document.getElementById('closeHelp');
-
-    function renderHelpSteps() {
-        const steps = helpStepsData[helpDevice];
-        helpStepsDiv.innerHTML = steps.map(s => `<div class="steps-list"><li>${s.html}</li></div>`).join('');
-    }
 
     if (openHelpBtn && helpModal) {
         openHelpBtn.addEventListener('click', function() {
-            helpDevice = 'iphone';
-            helpDeviceType.value = 'iphone';
-            renderHelpSteps();
             helpModal.style.display = 'flex';
-        });
-    }
-    if (helpDeviceType) {
-        helpDeviceType.addEventListener('change', function() {
-            helpDevice = helpDeviceType.value;
-            renderHelpSteps();
         });
     }
     if (closeHelpBtn && helpModal) {

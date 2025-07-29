@@ -370,9 +370,27 @@ header {
     position: relative;
 }
 
+.modal-close-x {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    line-height: 1;
+    color: #b94a4a;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+    transition: color 0.18s;
+}
+.modal-close-x:hover, .modal-close-x:focus {
+    color: #923231;
+    background: none;
+}
+
 #tutorialSteps, #helpSteps {
     width: 100%;
-    min-height: 180px;
     margin-bottom: 18px;
 }
 
@@ -404,7 +422,6 @@ header {
     filter: brightness(0.92);
 }
 
-/* Animación de brillo suave para botones */
 @keyframes buttonGlow {
     0% {
         filter: brightness(1) drop-shadow(0 0 0px #fff8f3);
@@ -420,7 +437,6 @@ header {
     }
 }
 
-/* Aplica la animación a todos los botones principales */
 .cta-btn,
 .help-btn,
 .modal-nav-btn {
@@ -438,6 +454,69 @@ header {
     margin-bottom: 2px;
     margin-top: 0;
     text-align: center;
+}
+
+.faq-section {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: #FCEDE2;
+    box-shadow: 0 1px 6px rgba(146,50,49,0.06);
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #923231;
+    padding: 14px 18px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: none;
+    transition: background 0.15s;
+}
+
+.faq-item[open] summary {
+    background: #fff8f3;
+}
+
+.faq-steps {
+    padding: 10px 22px 16px 22px;
+    font-size: 0.98rem;
+    color: #923231;
+    font-family: 'Montserrat', Arial, sans-serif;
+    max-height: 180px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    display: block;
+}
+
+.faq-steps b {
+    color: #b94a4a;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.faq-steps ol {
+    margin: 0 0 8px 18px;
+    padding: 0;
+}
+
+.faq-steps li {
+    margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 @media (max-width: 400px) {

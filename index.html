@@ -53,18 +53,62 @@
         <!-- Modal Ayuda -->
         <div id="helpModal" class="modal-bg" style="display:none;">
             <div class="modal-card">
-                <div class="device-select" style="margin-bottom:16px;">
-                    <label for="helpDeviceType"><b>Selecciona tu teléfono:</b></label>
-                    <select id="helpDeviceType">
-                        <option value="iphone">iPhone</option>
-                        <option value="android">Teléfono Android</option>
-                    </select>
-                </div>
-                <div id="helpSteps">
-                    <!-- Los pasos se llenan por JS -->
-                </div>
-                <div class="modal-actions">
-                    <button id="closeHelp" class="modal-nav-btn">Cerrar</button>
+                <button id="closeHelp" class="modal-close-x" aria-label="Cerrar ayuda">×</button>
+                <div class="faq-section">
+                    <details class="faq-item">
+                        <summary>¿Cómo instalar Google Fotos?</summary>
+                        <div class="faq-steps">
+                            <b>Android:</b>
+                            <ol>
+                                <li>Abre la app Play Store en tu teléfono.</li>
+                                <li>Busca Google Fotos.</li>
+                                <li>Presiona Instalar y espera a que termine.</li>
+                                <li>Abre la app desde tu menú de aplicaciones.</li>
+                            </ol>
+                            <b>IOS:</b>
+                            <ol>
+                                <li>Abre la App Store en tu iPhone.</li>
+                                <li>Busca Google Fotos.</li>
+                                <li>Pulsa Obtener y luego Instalar.</li>
+                                <li>Abre la app desde tu pantalla de inicio.</li>
+                            </ol>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cómo iniciar sesión en Google en mi dispositivo?</summary>
+                        <div class="faq-steps">
+                            <b>Android:</b>
+                            <ol>
+                                <li>Abre la app Google Fotos.</li>
+                                <li>Si es la primera vez, te pedirá iniciar sesión.</li>
+                                <li>Ingresa tu correo de Google y tu contraseña.</li>
+                                <li>Sigue las instrucciones en pantalla.</li>
+                            </ol>
+                            <b>IOS:</b>
+                            <ol>
+                                <li>Abre Google Fotos.</li>
+                                <li>Pulsa en Iniciar sesión o tu foto de perfil.</li>
+                                <li>Introduce tu cuenta de Google y contraseña.</li>
+                                <li>Confirma y sigue los pasos en pantalla.</li>
+                            </ol>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cómo le doy permisos a la aplicación?</summary>
+                        <div class="faq-steps">
+                            <b>Android:</b>
+                            <ol>
+                                <li>Al abrir Google Fotos por primera vez, aparecerá un mensaje solicitando permisos.</li>
+                                <li>Pulsa Permitir para dar acceso a tus fotos y archivos.</li>
+                                <li>Si no aparece, ve a Ajustes &gt; Aplicaciones &gt; Google Fotos &gt; Permisos y activa Archivos y multimedia.</li>
+                            </ol>
+                            <b>IOS:</b>
+                            <ol>
+                                <li>Al abrir Google Fotos, pulsa el botón Continuar &gt; Fotos &gt; elige la opción "Acceso completo".</li>
+                                <li>Si no aparece, ve a Ajustes &gt; Google Fotos &gt; Fotos y selecciona Todos las fotos.</li>
+                            </ol>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
