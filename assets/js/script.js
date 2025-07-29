@@ -93,20 +93,15 @@ window.addEventListener('DOMContentLoaded', function() {
     // --- Modal Tutorial Paso a Paso ---
     const tutorialSteps = [
         {
-            html: `<strong>Paso 1:</strong> Da clic en el botón "Ir a Google Fotos".<br>
+            html: `<strong>Paso 1:</strong> Escoge tu cuenta de Google y haz clic en <b>Ver álbum</b>. <span style="font-size:0.97em;color:#b94a4a;">(Ten en cuenta haber dado los permisos necesarios a la aplicación)</span><br>
             <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>`
         },
         {
-            html: `<strong>Paso 2:</strong> Si te pide iniciar sesión, usa tu cuenta de Google.<br>
+            html: `<strong>Paso 2:</strong> Haz clic en el botón <b>Agregar fotos</b> (<span class="icon">＋</span>).<br>
             <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>`
         },
         {
-            html: `<strong>Paso 3:</strong> Presiona el ícono <b>Agregar fotos</b> (<span class="icon">＋</span>).<br>
-            <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>`
-        },
-        {
-            html: `<strong>Paso 4:</strong> Selecciona tus fotos favoritas y súbelas.<br>
-            <div class="screenshot-placeholder">[Espacio para captura de pantalla]</div>`
+            html: `<div style="text-align:center;"><strong>Paso 3:</strong> Escoge tus fotos favoritas y súbelas.</div>`
         }
     ];
     let tutorialIndex = 0;
